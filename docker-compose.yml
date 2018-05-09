@@ -18,4 +18,5 @@ services:
         image: nanoninja/php-fpm:${PHP_VERSION}
         restart: always
         volumes:
+            - "./etc/php/php.ini:/usr/local/etc/php/conf.d/php.ini"
             - "${WWW_PATH}:/var/www/html"
