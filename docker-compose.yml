@@ -23,3 +23,5 @@ services:
             - "./etc/php/php.ini:/usr/local/etc/php/conf.d/php.ini"
             - "${METINFO_PATH}:/var/www/web"
             - "${WEBPAGE_PATH}:/var/www/webpage"
+        extra_hosts:
+            - "${WEB_DOMAIN}:${WEB_IP}" # 做一个域名映射，
