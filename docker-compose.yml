@@ -21,7 +21,8 @@ services:
             - "9000:9000"
         volumes:
             - "./etc/php/php.ini:/usr/local/etc/php/conf.d/php.ini"
+            - "./etc/php/www.conf:/usr/local/etc/php-fpm.d/www.conf"
             - "${METINFO_PATH}:/var/www/web"
             - "${WEBPAGE_PATH}:/var/www/webpage"
         extra_hosts:
-            - "${WEB_DOMAIN}:${WEB_IP}" # 做一个域名映射，
+            - "${WEB_DOMAIN}:${WEB_IP}"
