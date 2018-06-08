@@ -24,6 +24,7 @@ services:
             - "./etc/php/www.conf:/usr/local/etc/php-fpm.d/www.conf"
             - "./etc/php/docker.conf:/usr/local/etc/php-fpm.d/docker.conf"
             - "./log/php-access.log:/usr/local/etc/access.log"
+            - "./log/php-slow.log:/usr/local/etc/slow.log"
             - "${METINFO_PATH}:/var/www/web"
             - "${WEBPAGE_PATH}:/var/www/webpage"
         extra_hosts:
